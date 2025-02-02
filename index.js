@@ -50,9 +50,16 @@ function addToOrder(itemName) {
   orderTotal.textContent = `${totalPrice}`;
 }
 
+//Function for calculation of items
+function calculateTotalPrice() {
+  const orderItems = document.getElementById("order-items").children.length;
+  return orderItems * 60;
+}
+
 // Function to initialize the menu system
 function initMenuSystem(menu) {
   // Call the function to display menu items
+  displayMenuItems(menu);
 }
 
 // Start the menu system by calling the init function
